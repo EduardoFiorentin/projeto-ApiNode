@@ -1,5 +1,5 @@
 # projeto-crudUsers
-Este é um crud desenvolvido em NodeJS com o intuito de praticar o desenvolvimento de aplicações backend utilizando o paradigma de orientação a objetos, com principios de **SOLID** e **arquitetura limpa**.
+Este é um crud de usuários desenvolvido em NodeJS com o intuito de praticar o desenvolvimento de aplicações backend utilizando o paradigma de orientação a objetos, com principios de **SOLID** e **arquitetura limpa**.
 *-- Em Desenvolvimento --*
 
 ## Visão geral 
