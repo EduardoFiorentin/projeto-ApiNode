@@ -1,7 +1,7 @@
 import { User } from "../../entities/User";
 import { IUsersRepository } from "../IUsersRepository";
 
-export class PostgresUserRepository implements IUsersRepository{
+export class MockUserRepository implements IUsersRepository{
     private users: User[] = []
     
     constructor() {

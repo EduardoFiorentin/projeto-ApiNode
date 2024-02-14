@@ -1,9 +1,10 @@
-import { PostgresUserRepository } from "../../repositories/implementations/PostgresUserRepository";
+import { MockUserRepository } from "../../repositories/implementations/MockUserRepository";
+import { MySqlUserRepository } from "../../repositories/implementations/MySqlUserRepository";
 import { DeleteUserController } from "./DeleteUserController";
 import { DeleteUserUseCase } from "./DeleteUserUseCase";
 
-const postgresUserRepository = new PostgresUserRepository() 
-const deleteUserUseCase = new DeleteUserUseCase(postgresUserRepository)
+const userRepository = new MySqlUserRepository() 
+const deleteUserUseCase = new DeleteUserUseCase(userRepository)
 const deleteUserController = new DeleteUserController(deleteUserUseCase)
 
 export { deleteUserController }

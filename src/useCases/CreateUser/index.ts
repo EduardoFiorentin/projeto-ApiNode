@@ -1,14 +1,12 @@
-import { MailtrapMailProvider } from "../../providers/implementations/MailTrapMailProvider";
-import { PostgresUserRepository } from "../../repositories/implementations/PostgresUserRepository";
+import { MockUserRepository } from "../../repositories/implementations/MockUserRepository";
+import { MySqlUserRepository } from "../../repositories/implementations/MySqlUserRepository";
 import { CreateUserController } from "./CreateUserController";
 import { CreateUserUseCase } from "./CreateUserUseCase";
 
-const mailTrapMailProvider = new MailtrapMailProvider()
-const postgresUserRepository = new PostgresUserRepository() 
+const userRepository = new MySqlUserRepository() 
 
 const createUserUseCase = new CreateUserUseCase(
-    postgresUserRepository,
-    mailTrapMailProvider
+    userRepository
 )
 
 const createUserController = new CreateUserController(
